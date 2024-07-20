@@ -33,7 +33,6 @@ class App(ctk.CTk):
         self.current_page = self.pages[page_name]
         self.current_page.pack(expand=True, fill='both')
 
-
 def main():
     app = App("Simple Astro", 600, 600)
     app.run()
