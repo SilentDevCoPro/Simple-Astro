@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from pages.new_target import New_Target
 from pages.simple_astro import Simple_Astro
+from pages.settings_config import Settings_Config
 from listeners.event_manager import EventManager
 
 ctk.set_appearance_mode("dark")
@@ -19,14 +20,15 @@ class App(ctk.CTk):
         self.title(self.window_title)
         self.geometry(f'{self.window_x}x{self.window_y}')
     
-    def window_elements(self):
+    def load_pages(self):
         self.pages["Simple Astro"] = Simple_Astro(self)
         self.pages["New Target"] = New_Target(self)
+        self.pages["Settings/Config"] = Settings_Config(self)
         self.show_page("Simple Astro") 
         
     def run(self):
         self.window_attributes()
-        self.window_elements()
+        self.load_pages()
         self.mainloop()
 
     def show_page(self, page_name):

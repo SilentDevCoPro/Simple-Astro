@@ -5,8 +5,8 @@ def create_button(parent, text, callback) -> ctk.CTkButton:
         parent, 
         text=text, 
         corner_radius=8,
-        fg_color='#C850C0', 
-        hover_color='#4158D0',
+        fg_color='#C850C1', 
+        hover_color='#415810',
         width=200,
         height=50,
         command=callback
