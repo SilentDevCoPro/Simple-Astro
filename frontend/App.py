@@ -1,7 +1,12 @@
 import customtkinter as ctk
+
 from pages.new_target import New_Target
 from pages.simple_astro import Simple_Astro
 from pages.settings_config import Settings_Config
+from pages.last_targets import Last_targets
+from pages.pick_target import Pick_Target
+from pages.suggested_targets import Suggested_Targets
+
 from listeners.event_manager import EventManager
 
 ctk.set_appearance_mode("dark")
@@ -24,6 +29,9 @@ class App(ctk.CTk):
         self.pages["Simple Astro"] = Simple_Astro(self)
         self.pages["New Target"] = New_Target(self)
         self.pages["Settings/Config"] = Settings_Config(self)
+        self.pages["Last Targets"] = Last_targets(self)
+        self.pages["Pick Target"] = Pick_Target(self)
+        self.pages["Suggested Targets"] = Suggested_Targets(self)
         self.show_page("Simple Astro") 
         
     def run(self):
